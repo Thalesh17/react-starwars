@@ -1,0 +1,60 @@
+.starwar-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transform: scale(0.9);
+  transition: all ease 0.5s;
+}
+.starwar-user:hover {
+  transform: scale(1);
+}
+.color-language {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--color-starwar-language-color-border);
+  border-radius: 50%;
+}
+.starwar-language {
+  justify-content: flex-start;
+  font-size: 16px;
+  margin-top: 6px;
+  margin-bottom: 2px;
+}
+.starwar-name {
+  max-width: 16rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.starwar-info {
+  text-align: left;
+  display: flex;
+  gap: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.starwar-desc {
+  display: flex;
+  gap: 4px;
+}
+.update-starwar {
+  margin-bottom: 5px;
+}
+button.primary {
+  background-color: #03bfcb;
+  border: 1px solid #03bfcb;
+  border-radius: 3px;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+
+button.primary.ghost {
+  background-color: transparent;
+  color: #02899c;
+}

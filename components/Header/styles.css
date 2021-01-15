@@ -1,0 +1,20 @@
+.container {
+  background: #7159c1;
+  color: #fff;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 30px;
+  grid-gap: 10px;
+  position: fixed;
+  top: 0;
+  height: 4rem;
+  display: grid;
+  align-items: center;
+  z-index: 999;
+  max-height: 4rem;
+  width: 100vw;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.content {
+  padding-top: 10px;
+}

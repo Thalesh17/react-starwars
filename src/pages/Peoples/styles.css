@@ -1,0 +1,22 @@
+.container-users {
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
+}
+.content-repo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5rem;
+  row-gap: 3rem;
+  margin-top: 1rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.container-repos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 1rem;
+}
