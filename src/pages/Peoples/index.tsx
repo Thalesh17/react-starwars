@@ -8,10 +8,10 @@ export const Peoples: React.FC = () => {
   const { persons } = useStarwars();
 
   return (
-    <div className="container-users">
-      <div className="container-repos">
-        <h3>Starwars</h3>
-        <div className="content-repo">
+    <div className="container-stars">
+      <h3>Starwars</h3>
+      <div className="container-persons">
+        <div className="content-star">
           {persons &&
             persons.map((person: StarwarType, index) => (
               <Starwar starwar={person} key={index} />
