@@ -36,7 +36,7 @@ export const Starwar: React.FC<StarwarProps> = ({ starwar }) => {
         </div>
         <div className="starwar-desc">
           <h5>Cor dos olhos</h5>
-          <h5>{starwar.eye_color}</h5>
+          <h5 style={{ color: starwar.eye_color }}>{starwar.eye_color}</h5>
         </div>
       </div>
       <small className="update-starwar">Criado em {starwar.created}</small>
