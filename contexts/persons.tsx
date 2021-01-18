@@ -6,6 +6,7 @@ interface Persons {
   persons: StarwarType[];
   getStarwars(): void;
   filterStarwars(filter: string): void;
+  removeStarwar(name: string): void;
 }
 
 const PeopleContext = createContext<Persons>({} as Persons);
@@ -30,11 +31,23 @@ const PeopleProvider = ({ children }) => {
     setAllPersons(data);
   };
 
+  const removeStarwar = (name: string): void => {
+    setPersons(
+      persons.filter(
+        r => r.name.toLocaleLowerCase() !== name.toLocaleLowerCase()
+      )
+    );
+    setAllPersons(
+      allPersons.filter(
+        r => r.name.toLocaleLowerCase() !== name.toLocaleLowerCase()
+      )
+    );
+  };
+
   const filterStarwars = (filter: string): void => {
     const persons = allPersons.filter(data =>
       data.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase())
     );
-    console.log(persons);
     setPersons(persons);
   };
 
@@ -43,7 +56,8 @@ const PeopleProvider = ({ children }) => {
       value={{
         persons,
         getStarwars,
-        filterStarwars
+        filterStarwars,
+        removeStarwar
       }}
     >
       {children}

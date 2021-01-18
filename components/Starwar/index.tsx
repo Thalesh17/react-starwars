@@ -1,4 +1,5 @@
 import React from "react";
+import { useStarwars } from "../../contexts/persons";
 import { StarwarType } from "../../types/starwar";
 import "./styles.css";
 
@@ -11,6 +12,7 @@ enum genderEnum {
 }
 
 export const Starwar: React.FC<StarwarProps> = ({ starwar }) => {
+  const { removeStarwar } = useStarwars();
   const getDescriptionGender = (gender: string) => {
     return genderEnum[gender] || "Não possui";
   };
@@ -39,7 +41,9 @@ export const Starwar: React.FC<StarwarProps> = ({ starwar }) => {
       </div>
       <small className="update-starwar">Criado em {starwar.created}</small>
       <div className="buttons">
-        <button className="primary">Remover</button>
+        <button onClick={() => removeStarwar(starwar.name)} className="primary">
+          Remover
+        </button>
       </div>
     </div>
   );
